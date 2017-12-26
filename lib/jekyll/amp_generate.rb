@@ -28,7 +28,7 @@ module Jekyll
   end
   # Generates a new AMP post for each existing post
   class AmpGenerator < Generator
-    priority :low
+    priority :high
     def generate(site)
       dir = site.config['ampdir'] || 'amp'
       site.posts.docs.each do |post|
